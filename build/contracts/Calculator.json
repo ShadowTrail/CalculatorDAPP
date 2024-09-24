@@ -1,0 +1,230 @@
+{
+  "contractName": "Calculator",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "a",
+          "type": "int256"
+        },
+        {
+          "internalType": "int256",
+          "name": "b",
+          "type": "int256"
+        }
+      ],
+      "name": "calculate",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"a\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"b\",\"type\":\"int256\"}],\"name\":\"calculate\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Abstract Calculator Contract\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"calculate(int256,int256)\":{\"notice\":\"Performs any operation on two integers.\"}},\"notice\":\"This abstract contract defines basic operations that must be implemented by all the derived contracts.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Calculator.sol\":\"Calculator\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Calculator.sol\":{\"keccak256\":\"0xade65fba8826241b4d4da980f0e9d69ab0e62e9a6ecb6dde87ab3c87953d0390\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ca6b2c10dfee59641840e6cdad800339549a9bcf830e7e5614ebce1955a9087\",\"dweb:/ipfs/QmUcC5GypzKqs7cqkhpSLGnazEDueztJgPRV84j6cwj65g\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n/// @title Abstract Calculator Contract\r\n/// @notice This abstract contract defines basic operations that must be implemented by all the derived contracts.\r\nabstract contract Calculator {\r\n    /// @notice Performs any operation on two integers.\r\n    function calculate(int256 a, int256 b) public view virtual returns (int256);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\ANJALI LAPTOP\\Desktop\\CalculatorDAPP\\contracts\\Calculator.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Calculator.sol",
+    "exportedSymbols": {
+      "Calculator": [
+        36
+      ]
+    },
+    "id": 37,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 24,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:1"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "Calculator",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 25,
+          "nodeType": "StructuredDocumentation",
+          "src": "60:157:1",
+          "text": "@title Abstract Calculator Contract\n @notice This abstract contract defines basic operations that must be implemented by all the derived contracts."
+        },
+        "fullyImplemented": false,
+        "id": 36,
+        "linearizedBaseContracts": [
+          36
+        ],
+        "name": "Calculator",
+        "nameLocation": "235:10:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 26,
+              "nodeType": "StructuredDocumentation",
+              "src": "253:51:1",
+              "text": "@notice Performs any operation on two integers."
+            },
+            "functionSelector": "799e6f02",
+            "id": 35,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculate",
+            "nameLocation": "319:9:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "mutability": "mutable",
+                  "name": "a",
+                  "nameLocation": "336:1:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "329:8:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30,
+                  "mutability": "mutable",
+                  "name": "b",
+                  "nameLocation": "346:1:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "339:8:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "328:20:1"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "378:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:8:1"
+            },
+            "scope": 36,
+            "src": "310:76:1",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 37,
+        "src": "217:172:1",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:358:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-09-24T14:20:54.164Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "Abstract Calculator Contract",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "calculate(int256,int256)": {
+        "notice": "Performs any operation on two integers."
+      }
+    },
+    "notice": "This abstract contract defines basic operations that must be implemented by all the derived contracts.",
+    "version": 1
+  }
+}
