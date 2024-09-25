@@ -8,7 +8,8 @@ import "./Calculator.sol";
 contract ModulusOperation is Calculator {
     
     /// @inheritdoc Calculator
-    function calculate(int256 a, int256 b) public view override returns (int256) {
-        return a % b;
+    function calculate(int256 a, int256 b) public pure override returns (int256) {
+        require(b != 0 && b <= a, "Divisor should not be 0 or more than the dividend itself");
+        return (a % b);
     }
 }

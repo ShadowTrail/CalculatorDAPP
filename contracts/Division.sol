@@ -8,7 +8,9 @@ import "./Calculator.sol";
 contract DivisionOperation is Calculator {
 
     /// @inheritdoc Calculator
-    function calculate(int256 a, int256 b) public view override returns (int256) {
+    function calculate(int256 a, int256 b) public pure override returns (int256) {
+        require(b != 0, "Cannot divide by zero");
+        require(b <= a, "Divisor cannot be greater than dividend to receive an integer result.");
         return a / b;
     }
 }

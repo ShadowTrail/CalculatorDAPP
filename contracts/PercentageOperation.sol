@@ -8,8 +8,8 @@ import "./Calculator.sol";
 contract PercentageOperation is Calculator {
 
     /// @inheritdoc Calculator
-    function calculate(int256 a, int256 b) public view override returns (int256) {
-        require(b != 0, "Division by zero is not allowed.");
+    function calculate(int256 a, int256 b) public pure override returns (int256) {
+        require(b != 0, "Total must be greater than zero.");
         return (a / b) * 100;
     }
 }

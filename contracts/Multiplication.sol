@@ -8,7 +8,7 @@ import "./Calculator.sol";
 contract MultiplicationOperation is Calculator {
 
     /// @inheritdoc Calculator
-    function calculate(int256 a, int256 b) public view override returns (int256) {
+    function calculate(int256 a, int256 b) public pure override returns (int256) {
         return a * b;
     }
 }
