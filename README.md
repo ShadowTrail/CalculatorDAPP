@@ -14,29 +14,29 @@ Installation
 Clone the repository:
 
 bash
-Copy code
+<Copy code>
 git clone https://github.com/ShadowTrail/Calculator_DAPP.git
 cd Calculator_DAPP
 Install dependencies:
 
 bash
-Copy code
+<Copy code>
 npm install
 Compile the smart contracts:
 
 bash
-Copy code
+<Copy code>
 npx hardhat compile
 Deploy the contracts:
 
 bash
-Copy code
+<Copy code>
 npx hardhat run scripts/deploy.js --network <network_name>
 Usage
 Start the local development server:
 
 bash
-Copy code
+<Copy code>
 npm start
 Open the application in your browser and connect your MetaMask account.
 
