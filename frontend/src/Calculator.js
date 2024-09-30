@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Web3 from "web3";
-import { Button, TextField, Grid, Typography, Paper } from "@mui/material";
+import { Button, TextField, Grid2, Typography, Paper } from "@mui/material";
 import AddContract from "./contracts/AdditionOperation.json";
 import SubtractContract from "./contracts/SubtractionOperation.json";
 import MultiplyContract from "./contracts/MultiplicationOperation.json";
 import DivideContract from "./contracts/DivisionOperation.json";
 import ModulusContract from "./contracts/ModulusOperation.json";
-import PercentageContract from "./contracts/PercentageOperation.json";
 
 const Calculator = () => {
   const [num1, setNum1] = useState("");
@@ -33,27 +32,23 @@ const Calculator = () => {
       const contractInstances = {
         add: new web3Instance.eth.Contract(
           AddContract.abi,
-          "0x7DBc0098D713b11db0AdD862540bD50595B5de95"
+          "0x64a375aBd5aACfAc4abd0EE4cCB36B240E8850dB"
         ),
         subtract: new web3Instance.eth.Contract(
           SubtractContract.abi,
-          "0x06cC2E5b45f849cd414140dbB6908098DFa3f925"
+          "0x8dd383D0D5eCD46ABdDe3853604b67917D861a36"
         ),
         multiply: new web3Instance.eth.Contract(
           MultiplyContract.abi,
-          "0x59F5903bF23A048366668C41bb89a8CF6b6a85AD"
+          "0x5253D3c312756D1c28ed5F1e8EDC49548786c203"
         ),
         divide: new web3Instance.eth.Contract(
           DivideContract.abi,
-          "0x1ABb6DbaC5e46dE4D47798a3b09003000d9BD78F"
+          "0x1bae7e65E160701ECdB8B3aD55e8E5D74311B5E3"
         ),
         modulus: new web3Instance.eth.Contract(
           ModulusContract.abi,
-          "0x94167718974f347b283359F3E201206B1885B302"
-        ),
-        percentage: new web3Instance.eth.Contract(
-          PercentageContract.abi,
-          "0xBB47f1E1129DC30d2BB903183e3cd26152DF2510"
+          "0x32940CacBfA4065BB555875e25d830F25BfAB39f"
         ),
       };
       setContracts(contractInstances);
@@ -102,11 +97,6 @@ const Calculator = () => {
             .calculate(number1, number2)
             .call();
           break;
-        case "PERCENTAGE":
-          calculationResult = await contracts.percentage.methods
-            .calculate(number1, number2)
-            .call();
-          break;
         default:
           setError("Unknown operation");
           return;
@@ -123,8 +113,8 @@ const Calculator = () => {
       <Typography variant="h4" gutterBottom>
         Calculator
       </Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+      <Grid2 container spacing={11}>
+        <Grid2 item xs={6}>
           <TextField
             label="Number 1"
             type="number"
@@ -132,8 +122,8 @@ const Calculator = () => {
             onChange={(e) => setNum1(e.target.value)}
             fullWidth
           />
-        </Grid>
-        <Grid item xs={6}>
+        </Grid2>
+        <Grid2 item xs={6}>
           <TextField
             label="Number 2"
             type="number"
@@ -141,18 +131,18 @@ const Calculator = () => {
             onChange={(e) => setNum2(e.target.value)}
             fullWidth
           />
-        </Grid>
-        <Grid item xs={12}>
+        </Grid2>
+        <Grid2 item xs={12}>
           {error && <Typography color="error">{error}</Typography>}
           {result && (
             <Typography variant="h6">Result: {String(result)}</Typography>
           )}
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} style={{ marginTop: "20px" }}>
-        {["ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "MODULO", "PERCENTAGE"].map(
+        </Grid2>
+      </Grid2>
+      <Grid2 container spacing={2} style={{ marginTop: "20px" }}>
+        {["ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "MODULO"].map(
           (operation) => (
-            <Grid item xs={3} key={operation}>
+            <Grid2 item xs={3} key={operation}>
               <Button
                 variant="contained"
                 fullWidth
@@ -160,10 +150,10 @@ const Calculator = () => {
               >
                 {operation}
               </Button>
-            </Grid>
+            </Grid2>
           )
         )}
-      </Grid>
+      </Grid2>
     </Paper>
   );
 };

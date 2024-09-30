@@ -5,7 +5,6 @@ const Subtract = artifacts.require("SubtractionOperation");
 const Multiply = artifacts.require("MultiplicationOperation");
 const Divide = artifacts.require("DivisionOperation");
 const Modulus = artifacts.require("ModulusOperation");
-const Percentage = artifacts.require("PercentageOperation");
 
 module.exports = async function (deployer) {
   try {
@@ -14,7 +13,6 @@ module.exports = async function (deployer) {
     await deployer.deploy(Multiply);
     await deployer.deploy(Divide);
     await deployer.deploy(Modulus);
-    await deployer.deploy(Percentage);
 
     console.log("Contracts deployed successfully!");
   } catch (error) {

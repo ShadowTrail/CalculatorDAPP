@@ -7,7 +7,6 @@ import SubtractContract from "./contracts/SubtractionOperation.json";
 import MultiplyContract from "./contracts/MultiplicationOperation.json";
 import DivideContract from "./contracts/DivisionOperation.json";
 import ModulusContract from "./contracts/ModulusOperation.json";
-import PercentageContract from "./contracts/PercentageOperation.json";
 
 const App = () => {
   const [web3, setWeb3] = useState(null);
@@ -25,27 +24,22 @@ const App = () => {
         const contractInstances = {
           add: new web3Instance.eth.Contract(
             AddContract.abi,
-            "0x7DBc0098D713b11db0AdD862540bD50595B5de95"
+            "0x64a375aBd5aACfAc4abd0EE4cCB36B240E8850dB"
           ),
           subtract: new web3Instance.eth.Contract(
             SubtractContract.abi,
-            "0x06cC2E5b45f849cd414140dbB6908098DFa3f925"
+            "0x8dd383D0D5eCD46ABdDe3853604b67917D861a36"
           ),
           multiply: new web3Instance.eth.Contract(
             MultiplyContract.abi,
-            "0x59F5903bF23A048366668C41bb89a8CF6b6a85AD"
           ),
           divide: new web3Instance.eth.Contract(
             DivideContract.abi,
-            "0x1ABb6DbaC5e46dE4D47798a3b09003000d9BD78F"
+            "0x1bae7e65E160701ECdB8B3aD55e8E5D74311B5E3"
           ),
           modulus: new web3Instance.eth.Contract(
             ModulusContract.abi,
-            "0x94167718974f347b283359F3E201206B1885B302"
-          ),
-          percentage: new web3Instance.eth.Contract(
-            PercentageContract.abi,
-            "0xBB47f1E1129DC30d2BB903183e3cd26152DF2510"
+            "0x32940CacBfA4065BB555875e25d830F25BfAB39f"
           ),
         };
 
